@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/tailwind.config.js"></script>
+</head>
+
+<body class="bg-light">
+    <main class="px-[16px] sm:px-[120px] pt-6 sm:pt-[48px] pb-2 sm:pb-6 ">
+        <section id="head" class="flex flex-row items-center justify-between space-x-6">
+            <img src="assets/img/logo.png" alt="" srcset="" class="w-6 h-6 sm:w-[82px] sm:h-[82px]">
+            <div class="flex flex-col flex-1 space-y-1 sm:max-w-full max-w-[200px]">
+                <h1 class="text-xl sm:text-4xl font-semibold text-primary">Agenda Protokoler Sumedang</h1>
+                <p class="text-sm sm:text-2xl text-gray-muted">Menampilkan agenda hari ini</p>
+            </div>
+            <button
+                class="bg-primary text-base font-semibold text-white py-3 px-4 rounded-lg w-fit h-fit hover:bg-active hover:text-primary hover:border-2 hover:border-primary">Print
+                Agenda</button>
+        </section>
+        <section id="content" class="pt-9 max-w-full">
+            <!-- Title -->
+            <div class="flex flex-col pb-9">
+                <h2 class="text-2xl font-medium text-primary">Agenda Hari Ini</h2>
+                <p class="text-base text-gray-muted">Jumat 8, September 2023</p>
+            </div>
+            <!-- konten -->
+            <div class="flex flex-col space-y-3">
+                <!-- card active -->
+                <div class="bg-active px-4 py-3 border-l-2 border-primary space-y-2">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row items-center space-x-1">
+                            <h1 class="text-2xl font-semibold text-primary">08:00</h1>
+                            <span
+                                class="bg-secondary text-xs font-medium text-dark w-fit h-fit rounded-lg py-0.5 px-2">Berlangsung</span>
+                        </div>
+                        <div class="flex flex-row items-center space-x-1 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="#1A5D11" />
+                            </svg>
+                            <span class="text-xs font-medium text-primary">Sahli Bupati Bidang Pembangunan, Ekonomi dan
+                                Keuangan</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <h2 class="text-base font-medium text-dark">Silaturahmi dengan Bapak Bupati dan Wakil Bupati
+                            Sumedang
+                            sekaligus perpisahan dengan rekan Camat
+                            yang alih tugas dan purna bhakti.</h2>
+                        <p class="text-base text-gray-muted">Sapatapaan Desa Citengah Kecamatan sumedang Selatan</>
+                    </div>
+                </div>
+                <!-- card none-active -->
+                <div class=" px-4 py-3 space-y-2 hover:bg-active">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row items-center space-x-1">
+                            <h1 class="text-2xl font-semibold text-primary">08:00</h1>
+                        </div>
+                        <div class="flex flex-row items-center space-x-1 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="#1A5D11" />
+                            </svg>
+                            <span class="text-xs font-medium text-primary">Sahli Bupati Bidang Pembangunan, Ekonomi dan
+                                Keuangan</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <h2 class="text-base font-medium text-dark">Silaturahmi dengan Bapak Bupati dan Wakil Bupati
+                            Sumedang
+                            sekaligus perpisahan dengan rekan Camat
+                            yang alih tugas dan purna bhakti.</h2>
+                        <p class="text-base text-gray-muted">Sapatapaan Desa Citengah Kecamatan sumedang Selatan</>
+                    </div>
+                </div>
+                <div class=" px-4 py-3 space-y-2 hover:bg-active">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row items-center space-x-1">
+                            <h1 class="text-2xl font-semibold text-primary">08:00</h1>
+                        </div>
+                        <div class="flex flex-row items-center space-x-1 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="#1A5D11" />
+                            </svg>
+                            <span class="text-xs font-medium text-primary">Sahli Bupati Bidang Pembangunan, Ekonomi dan
+                                Keuangan</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <h2 class="text-base font-medium text-dark">Silaturahmi dengan Bapak Bupati dan Wakil Bupati
+                            Sumedang
+                            sekaligus perpisahan dengan rekan Camat
+                            yang alih tugas dan purna bhakti.</h2>
+                        <p class="text-base text-gray-muted">Sapatapaan Desa Citengah Kecamatan sumedang Selatan</>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
