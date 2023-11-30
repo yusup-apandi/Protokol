@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="assets/tailwind.config.js"></script>
+    <!-- Link Date Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+
+<body class="bg-light">
+    <main class="px-[16px] sm:px-[120px] pt-6 sm:pt-[48px] pb-2 sm:pb-6 ">
+        <section id="head" class="flex flex-col sm:flex-row sm:items-center justify-between sm:space-x-6 space-y-3">
+            <div class="flex flex-col sm:flex-row sm:space-x-4 sm:items-center space-y-2">
+                <img src="assets/img/logo.png" alt="" srcset="" class="w-[74px] h-[74px] sm:w-[82px] sm:h-[82px]">
+                <div class="flex flex-col flex-1 space-y-1">
+                    <h1 class="text-4xl font-semibold text-primary">Buku Tamu Protokoler Sumedang</h1>
+                    <p class="text-2xl text-gray-muted">Pemerintah Kabupaten Sumedang</p>
+                </div>
+            </div>
+        </section>
+        <section id="content" class="pt-9 w-full">
+            <!-- Title -->
+            <div class="flex flex-col pb-1">
+                <h2 class="text-2xl font-medium text-primary">Form Pengajuan Kunjungan </h2>
+                <p class="text-base text-gray-muted">Harap isi form di bawah ini dengan jelas.</p>
+            </div>
+            <!-- Form -->
+            <form class="space-y-8 divide-y divide-gray-200">
+                <div class="space-y-8 divide-y divide-gray-200">
+                    <div class="mt-6 flex flex-col space-y-4">
+                        <div>
+                            <label for="nama-kegiatan" class="block text-sm font-medium text-primary">Nama
+                                Kegiatan/Acara</label>
+                            <div class="mt-1">
+                                <input type="text" name="nama-kegiatan" id="nama-kegiatan" autocomplete="nama-kegiatan"
+                                    placeholder="Masukan nama kegiatan/Acara" class="block w-full rounded-md border-gray-300
+                                    shadow-sm focus:border-primary
+                                        focus:ring-primary sm:text-sm" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="kepala-rombongan" class="block text-sm font-medium text-primary">Kepala
+                                Rombongan</label>
+                            <div class="mt-1">
+                                <input type="text" name="kepala-rombongan" id="kepala-rombongan"
+                                    autocomplete="kepala-rombongan" placeholder="Masukan nama kepala rombongan" class="block w-full rounded-md
+                                    border-gray-300
+                                    shadow-sm focus:border-primary
+                                        focus:ring-primary sm:text-sm" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="tanggal" class="block text-sm font-medium text-primary">Tanggal</label>
+                            <div class="mt-1">
+                                <input type="text" name="tanggal" id="datepicker" autocomplete="tanggal"
+                                    placeholder="Silahkan pilih tanggal acara/kegiatan" class="block w-full rounded-md
+                                    border-gray-300
+                                    shadow-sm focus:border-primary
+                                        focus:ring-primary sm:text-sm" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="nama-penginapan" class="block text-sm font-medium text-primary">Nama
+                                Penginapan</label>
+                            <div class="mt-1">
+                                <input type="text" name="nama-penginapan" id="nama-penginapan"
+                                    autocomplete="nama-penginapan" placeholder="Masukan nama penginapan" class="block w-full rounded-md
+                                    border-gray-300
+                                    shadow-sm focus:border-primary
+                                        focus:ring-primary sm:text-sm" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="tujuan-kegiatan" class="block text-sm font-medium text-primary">Tujuan
+                                Kegiatan/Acara</label>
+                            <div class="mt-1">
+                                <input type="text" name="tujuan-kegiatan" id="tujuan-kegiatan"
+                                    autocomplete="tujuan-kegiatan" placeholder="Masukan tujuan kegiatan/acara" class="block
+                                    w-full rounded-md
+                                    border-gray-300
+                                    shadow-sm focus:border-primary
+                                        focus:ring-primary sm:text-sm" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="rencana-kegiatan" class="block text-sm font-medium text-primary">Rencana
+                                Kegiatan</label>
+                            <div class="mt-1">
+                                <textarea id="rencana-kegiatan" name="rencana-kegiatan" rows="2"
+                                    placeholder="Silahkan deskripsikan rangkain kegiatan yang akan dilakukan" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500
+                                        focus:ring-indigo-500 sm:text-sm" required></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="peserta" class="block text-sm font-medium text-primary">Nama Peserta</label>
+                            <div class="mt-1">
+                                <input type="text" name="peserta" id="peserta" autocomplete="peserta"
+                                    placeholder="Masukan nama peserta" class="block w-full rounded-md
+                                    border-gray-300
+                                    shadow-sm focus:border-primary
+                                        focus:ring-primary sm:text-sm" required>
+                            </div>
+                        </div>
+                        <button type="button" onclick="addPeserta()" class="bg-primary text-sm font-semibold text-white py-2 px-4 rounded-lg w-fit h-fit
+                            hover:bg-active hover:font-semibold hover:text-primary hover:border-2
+                            hover:border-primary hover:w-fit hover:h-fit">Tambah Peserta</button>
+                    </div>
+                </div>
+
+                <div class="pt-5">
+                    <div class="flex justify-end">
+                        <button type="submit"
+                            class="bg-primary text-sm font-semibold text-white py-3 px-4 rounded-lg w-fit h-fit hover:bg-active hover:font-semibold hover:text-primary hover:border-2 hover:border-primary">Kirim
+                            Pengajuan
+                            Agenda</button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+
+    </main>
+    <!-- Script Date Picker -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#datepicker", {
+                dateFormat: "Y-m-d",
+                // Opsi tambahan flatpickr bisa ditambahkan di sini
+                theme: "airbnb", // Gaya tema, contoh "light", "dark", "material_blue", "airbnb", dll.
+            });
+        });
+
+        // Fungsi submitForm untuk menangani pengiriman formulir (Opsional)
+        function submitForm() {
+            const selectedDate = document.getElementById('datepicker').value;
+            alert(`You selected: ${selectedDate}`);
+            // Tambahkan logika pengiriman formulir atau tindakan lain di sini
+        }
+    </script>
+    <!-- End Script -->
+
+    <!-- Script  Add Peserta -->
+    <script>
+        function addPeserta() {
+            const form = document.getElementById('dynamic-form');
+            const pesertaContainer = document.createElement('div');
+            pesertaContainer.className = 'mb-4';
+
+            pesertaContainer.innerHTML = `
+        <label for="peserta" class="block text-sm font-medium text-primary">Nama Peserta</label>
+        <div class="mt-1">
+          <input type="text" name="peserta[]" autocomplete="peserta" placeholder="Masukan nama peserta"
+            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary
+            focus:ring-primary sm:text-sm" required>
+        </div>
+      `;
+
+            form.insertBefore(pesertaContainer, form.lastElementChild);
+        }
+
+        document.getElementById('dynamic-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const pesertaNames = formData.getAll('peserta[]');
+            alert('Submitted Participants:\n' + pesertaNames.join(', '));
+            // Tambahkan logika pengiriman formulir atau tindakan lain di sini
+        });
+    </script>
+
+</body>
+
+</html>
